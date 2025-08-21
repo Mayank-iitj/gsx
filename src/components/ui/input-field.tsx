@@ -1,7 +1,9 @@
 "use client";
 
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useState, useId, useRef } from "react";
 import { Eye, EyeOff, X, Loader2 } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Input } from "./input";
 
 interface InputFieldProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'size'> {
   label?: string;
